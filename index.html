@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Panel</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .product-container{
+            height: 100vh;
+            width: 100%;
+            background: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .pr{
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            background: white;
+            margin: 10px;
+        }
+        .pr .imgBox{
+            width: 100%;
+            border: 1px solid red;
+        }
+        .pr .imgBox img{
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+        .pr h1{
+            text-align: center;
+        }
+        .pr h3{
+            display: inline-block;
+            /* border: 2px solid red; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <div class="pr">
+            <div class="imgBox">
+                <img src="/images/baloon.png" alt="pr1">
+            </div>
+            <h1>Vanilla</h1>
+            <h3>Product Desctiption</h3>
+            <button onclick="toggle()">
+                <!-- <img  src="/images/down-arrow.png" alt="" width="20px"> -->
+Click
+            </button>
+            <div id="description">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel illo earum commodi distinctio veritatis nemo animi praesentium eaque quisquam iste.</p>
+            </div>
+        </div>
+        <div class="pr">
+            <div class="imgBox">
+                <img src="/images/bg.jpg" alt="pr1">
+            </div>
+            <h1>Chocolate</h1>
+            <button onclick="toggle2()">
+                <img  src="/images/down-arrow.png" alt="" width="20px">
+
+            </button>
+            <div class="description2">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel illo earum commodi distinctio veritatis nemo animi praesentium eaque quisquam iste.</p>
+            </div>
+        </div>
+        <div class="pr">
+            <div class="imgBox">
+                <img src="/images/circle.png" alt="pr1">       
+            </div>
+            <h1>Sundae</h1>
+        </div>
+        <div class="pr">
+            <div class="imgBox">
+                <img src="/images/ice.jpg" alt="pr1">
+            </div>
+            <h1>Kulfi</h1>
+        </div>
+        <div class="pr">
+            <div class="imgBox">
+                <img src="/images/main-bg.jpg" alt="pr1">
+            </div>
+            <h1>Matka Kulfi</h1>
+        </div>
+    </div>
+    <script>
+    function toggle() {
+  let x = document.getElementById("description");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+    function toggle2(){
+        let content2 = document.getElementsByClassName("description2")
+        if (content2.style.display === "block"){
+            content2.style.display = "none";
+        }
+        else{
+            content2.style.display = "block";
+        }
+    }
+    </script>
+</body>
+</html>
